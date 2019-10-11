@@ -34,3 +34,32 @@ function share () {
 }
 ```
 完成以上配置即可完成 页面的分享动作的一致性
+
+
+###  gloabalForEach小程序页面守卫 进阶用法
+- 拿小程序页面的this.data代理程序为例
+
+```javascript
+PageForeach({
+   resetTarget:{
+       onShareAppMessage:function (res) {
+           return share(res)
+       }
+   }
+},
+    WX_proxy_shell({  //代理外壳配置
+        injection: ['watch'],  //功能注入，注入watch功能
+        proxyPage: ['home'], // 需要实现代理的页面 
+        moisturises: { // 注入规则函数
+            watch: function () {
+                console.log('注入watch')
+            }
+        }
+})
+)();
+```
+1、目标是实现简单的配置实现watch功能
+2、无需使用this.setData就可以触发视图改变
+
+### 目前还未完成目标
+
