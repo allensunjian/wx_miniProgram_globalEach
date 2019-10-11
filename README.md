@@ -47,7 +47,7 @@ PageForeach({
        }
    }
 },
-    WX_proxy_shell({  //代理外壳配置
+    WX_proxy_shell({  //注入代理外壳配置
         injection: ['watch'],  //功能注入，注入watch功能
         proxyPage: ['home'], // 需要实现代理的页面 
         moisturises: { // 注入规则函数
