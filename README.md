@@ -1,4 +1,4 @@
-###  gloabalForEach
+###  gloabalForEach小程序页面守卫 基本用法
 ###### 针对小程序，实现连接混入自定义程序的程序
 
     
